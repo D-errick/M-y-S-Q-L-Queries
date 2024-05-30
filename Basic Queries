@@ -1,0 +1,64 @@
+-- SQL Tutorials (DBMS)
+
+CREATE DATABASE giraffe;
+
+CREATE TABLE student (
+student_id INT,
+s_names VARCHAR(20) NOT NULL,
+major VARCHAR(20) DEFAULT 'undecided',
+PRIMARY KEY(student_id)
+ );
+ 
+DESCRIBE student;
+# On Deleting Tables
+DROP TABLE student;
+
+# Altering and modifying created tables
+ALTER TABLE student ADD gpa DECIMAL(3,2);
+ALTER TABLE student DROP COLUMN gpa;
+
+# incase row lacks all the schema information
+INSERT INTO student(student_id, s_names) VALUES('Claire', 'Art');
+INSERT INTO student(student_id, s_names) VALUES('DALMAS', 'Music');
+
+# This is when you have added auto-increment in your schema
+INSERT INTO student(s_names, major) VALUES('Claire', 'Art');
+INSERT INTO student(s_names, major) VALUES('DALMAS', 'Music');
+
+# For adding/Inserting values to your table
+INSERT INTO student VALUES(1, 'Jack', 'Biology');
+INSERT INTO student VALUES(2, 'Kate', 'Sociology');
+INSERT INTO student VALUES(3, 'Claire', 'Chemistry');
+INSERT INTO student VALUES(4, 'Derrick', 'Physcs');
+INSERT INTO student VALUES(5, 'Douglas', 'Agriculture');
+
+INSERT INTO student VALUES
+(6, 'Moses', 'Art'),
+(7, 'Dennis', 'Business'),
+(8, 'Ian', 'Music'),
+(9, 'Alice', 'English'),
+(10, 'Cecilia', 'Communications');
+
+SELECT *
+FROM student;
+
+# Updating and deleting Rows inside a Database Table
+UPDATE student
+SET major = 'Bio'
+WHERE major = 'Biology';
+
+UPDATE student
+SET major = 'Comms'
+WHERE major = 'Communications';
+
+DELETE FROM student
+WHERE student_id = 5;
+
+# Basic Queries
+SELECT *
+FROM student
+WHERE major <> 'Biology' AND s_names <> 'Derrick';
+
+SELECT *
+FROM student
+WHERE s_names IN ('Derrick', 'Claire', 'Douglas');
