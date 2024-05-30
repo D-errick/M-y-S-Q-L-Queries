@@ -1,6 +1,6 @@
 -- SQL Tutorials (DBMS)
 
-CREATE DATABASE giraffe;
+CREATE DATABASE school;
 
 CREATE TABLE student (
 student_id INT,
