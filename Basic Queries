@@ -62,3 +62,4 @@ WHERE major <> 'Biology' AND s_names <> 'Derrick';
 SELECT *
 FROM student
 WHERE s_names IN ('Derrick', 'Claire', 'Douglas');
+
