@@ -40,7 +40,7 @@ The final product is an interactive dashboard built with Looker Studio to suppor
 
 📌 ERD showing the structure and relationships between tables:
 
-![ERD](A_Entity_Relationship_Diagram_(ERD)_in_the_form_of.png)
+![ERD](https://github.com/D-errick/M-y-S-Q-L-Queries/blob/main/erd.png)
 
 ---
 
